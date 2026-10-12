@@ -1,0 +1,18 @@
+/* V124: generated logistics illustration replaces the provisional CSS artwork. */
+html body #loginOverlay .ops-login-hero{
+  background-color:#03132f!important;
+  background-image:linear-gradient(180deg,rgba(1,12,35,.1),rgba(1,12,35,.22)),url('login-operations-hero-v124.png')!important;
+  background-repeat:no-repeat!important;
+  background-position:center bottom!important;
+  background-size:100% auto!important;
+}
+html body #loginOverlay .ops-iso-map{display:none!important;visibility:hidden!important}
+html body #loginOverlay .ops-hero-content:after{background:linear-gradient(90deg,rgba(3,17,49,.98),rgba(3,17,49,.74) 62%,transparent)!important}
+
+@media(max-width:760px){
+  html body #loginOverlay .ops-login-hero{
+    background-image:linear-gradient(180deg,rgba(1,12,35,.02),rgba(1,12,35,.08)),url('login-operations-hero-v124.png')!important;
+    background-position:center center!important;
+    background-size:cover!important;
+  }
+}

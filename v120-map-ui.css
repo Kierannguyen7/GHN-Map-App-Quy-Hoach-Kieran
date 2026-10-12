@@ -1,0 +1,16 @@
+/* Floating planning menu: independent from the crowded top navigation. */
+html body .topbar>#mobileMenuBtn{display:none!important;visibility:hidden!important;pointer-events:none!important}
+#v120MapMenuBtn{position:fixed;left:12px;top:84px;z-index:1200;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.92);border-radius:13px;background:linear-gradient(135deg,#ff6b00,#f04416);color:#fff;box-shadow:0 8px 22px rgba(15,23,42,.34);font-size:20px;font-weight:1000;line-height:1;cursor:pointer;pointer-events:auto;touch-action:manipulation}
+#v120MapMenuBtn:hover{transform:translateY(-1px);box-shadow:0 10px 25px rgba(15,23,42,.38)}
+#v120MapMenuBtn:active{transform:translateY(0)}
+body.v106-ops-mode #v120MapMenuBtn,html.app-locked #v120MapMenuBtn{display:none!important}
+body:not(.v106-ops-mode) #map .leaflet-top.leaflet-left{top:136px!important}
+
+/* Operations markers: compact warehouse/branch icon, not default pin/circle. */
+html body .v106-marker,html body .v107-marker,html body .ops-bc-marker{width:26px!important;height:26px!important;border-radius:8px!important;background:linear-gradient(180deg,#fff7ed 0%,#fff 100%)!important;border:2px solid #fff!important;box-shadow:0 3px 10px rgba(15,23,42,.34),0 0 0 2px rgba(255,90,0,.38)!important;position:relative!important;display:grid!important;place-items:center!important;box-sizing:border-box!important;color:#ff5a00!important;transition:transform .15s ease,box-shadow .15s ease,background .15s ease!important}
+html body .v106-marker:after,html body .v107-marker:after,html body .ops-bc-marker:after{content:none!important;display:none!important}
+html body .v106-marker svg,html body .v107-marker svg,html body .ops-bc-marker svg{width:18px!important;height:18px!important;display:block!important;color:currentColor!important;filter:drop-shadow(0 1px 0 rgba(255,255,255,.65))!important}
+html body .v106-marker.selected,html body .v106-marker:hover,html body .v107-marker.selected,html body .v107-marker:hover,html body .ops-bc-marker.selected,html body .ops-bc-marker:hover{transform:scale(1.13)!important;background:linear-gradient(180deg,#ff7a1a 0%,#ff4d00 100%)!important;color:#fff!important;border-color:#fff!important;box-shadow:0 5px 16px rgba(255,90,0,.42),0 0 0 4px rgba(255,90,0,.22)!important}
+
+@media(max-width:560px){#v120MapMenuBtn{top:66px;left:10px;width:42px;height:42px;border-radius:12px;font-size:19px}body:not(.v106-ops-mode) #map .leaflet-top.leaflet-left{top:116px!important}}
+@media(max-width:768px){html body .v106-marker,html body .v107-marker,html body .ops-bc-marker{width:24px!important;height:24px!important;border-width:2px!important}html body .v106-marker svg,html body .v107-marker svg,html body .ops-bc-marker svg{width:16px!important;height:16px!important}}

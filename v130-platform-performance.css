@@ -1,0 +1,46 @@
+/* V130: consistent Vietnamese typography across Windows and macOS. */
+:root{
+  --dcl-ui-font:-apple-system,BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji";
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+table,
+.leaflet-container,
+#loginOverlay,
+#v118PlanningCenter,
+#v107CapPanel,
+.v106-shell,
+.v103-shell{
+  font-family:var(--dcl-ui-font)!important;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+}
+
+body{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.kpi strong,
+.v118-global-card b,
+.v118-mini b,
+.v106-kpi b,
+.v106-table td{
+  font-variant-numeric:tabular-nums;
+}
+
+/* Keep inactive planning views out of layout and paint work. */
+#v118PlanningCenter .v118-view:not(.active){
+  display:none!important;
+}
+
+/* A selected route stays visible while every other route is visually muted. */
+body.v130-route-isolated .leaflet-overlay-pane canvas,
+body.v130-route-isolated .leaflet-overlay-pane svg{
+  transition:opacity .12s ease;
+}

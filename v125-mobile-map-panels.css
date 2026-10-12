@@ -1,0 +1,57 @@
+/* V125: compact, dismissible map panels for phone screens. */
+@media(max-width:760px){
+  html body #v120MapMenuBtn{
+    top:70px!important;
+    z-index:2147483550!important;
+    box-shadow:0 8px 22px rgba(15,23,42,.3)!important;
+  }
+  html body.mobile-ui #mainSidebar.sidebar.mobile-open{
+    top:auto!important;
+    bottom:0!important;
+    height:46dvh!important;
+    min-height:330px!important;
+    max-height:46dvh!important;
+    border-radius:24px 24px 0 0!important;
+    overflow:auto!important;
+  }
+  html body #mobileBackdrop.open{
+    background:rgba(15,23,42,.08)!important;
+    backdrop-filter:none!important;
+  }
+  html body.mobile-ui #v118PlanningCenter.open{
+    left:8px!important;
+    right:8px!important;
+    top:auto!important;
+    bottom:8px!important;
+    width:auto!important;
+    height:min(58dvh,520px)!important;
+    max-height:58dvh!important;
+    border-radius:20px!important;
+    overflow:hidden!important;
+  }
+  html body #v118PlanningCenter .v118-body,
+  html body #v118PlanningCenter .v118-content{
+    min-height:0!important;
+    overflow:auto!important;
+  }
+
+  html body.v106-ops-mode #v106Left.mobile-open{
+    left:8px!important;
+    right:8px!important;
+    top:auto!important;
+    bottom:8px!important;
+    width:auto!important;
+    height:clamp(340px,56dvh,500px)!important;
+    min-height:0!important;
+    max-height:56dvh!important;
+    overflow:auto!important;
+  }
+  html body.v106-ops-mode #v122OpsGroup{
+    flex:0 0 auto!important;
+  }
+}
+
+@media(max-width:390px) and (max-height:700px){
+  html body.mobile-ui #mainSidebar.sidebar.mobile-open{height:48dvh!important;max-height:48dvh!important;min-height:280px!important}
+  html body.v106-ops-mode #v106Left.mobile-open{height:58dvh!important;max-height:58dvh!important}
+}

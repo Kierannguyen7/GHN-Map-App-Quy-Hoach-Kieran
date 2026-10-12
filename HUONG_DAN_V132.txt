@@ -1,0 +1,133 @@
+DCL OPERATIONS V134B
+
+Ban V134B sua loi toa do de xuat buu cuc bi lech ra ngoai dia ban phu trach.
+
+1. Nguyen nhan loi cu
+- Ban truoc tinh Facility Location theo trong so volume/khoang cach.
+- Voi cum xa/phuong co hinh dang cong, dai, bi tach manh hoac khong lien mach, diem trung binh toi uu co the roi ra ngoai polygon.
+- Vi vay marker buu cuc moi/di doi co luc nam lech ngoai pham vi phu trach.
+
+2. Cach sua trong V134B
+- Sau khi tinh diem toi uu, he thong kiem tra diem do co nam trong polygon xa/phuong phu trach hay khong.
+- Neu nam ngoai, he thong tu dong chon diem tot nhat nam ben trong mot polygon thuoc cum phu trach.
+- Diem duoc chon van uu tien:
+  + Gan tam cum.
+  + Gan khu vuc volume cao.
+  + Giam tong khoang cach uoc tinh.
+  + Khong nam sat ranh/goc ngoai cum neu co diem phu hop hon.
+- Audit mo phong bo sung canh bao neu BC moi/di doi co toa do nam ngoai vung phu trach.
+
+3. Ket qua test V134B
+- Buu cuc hien huu: 62.
+- Buu cuc sau mo phong: 71.
+- De xuat mo them: 9.
+- Xa/phuong bi gan chong buu cuc: 0.
+- BC moi/di doi thieu toa do: 0.
+- BC moi/di doi co toa do nam ngoai vung phu trach: 0.
+
+----------------------------------------------------------------------
+
+DCL OPERATIONS V134A
+
+Ban V134A bo sung lop kiem tra on dinh da nen tang va kiem dinh mo phong quy hoach.
+
+1. Kiem tra da nen tang
+- He thong dung font stack moi cho MacOS, Windows, iOS, iPadOS va Android:
+  - macOS/iOS: -apple-system.
+  - Windows: Segoe UI Variable Text / Segoe UI.
+  - Android: Roboto.
+  - Du phong: Helvetica Neue, Arial, Noto Sans.
+- Da bat text-size-adjust 100% de han che loi chu bi phong/to bat thuong tren mobile.
+- Kiem thu kich thuoc man hinh:
+  + Desktop 1440x900.
+  + Windows laptop 1366x768.
+  + iPad 1024x1366.
+  + iPhone 390x844.
+  + Android 412x915.
+- Ket qua: khong tran ngang, font hien dung, man hinh dang nhap va ban do van giu bo cuc.
+
+2. Kiem dinh mo phong quy hoach
+- He thong co audit sau moi lan render mo phong.
+- Audit kiem tra:
+  + Moi xa/phuong chi thuoc dung 1 buu cuc sau quy hoach.
+  + Khong phat sinh chong cheo khu vuc phu trach giua buu cuc cu, buu cuc moi va buu cuc di doi.
+  + Tat ca buu cuc moi/mo phong/di doi phai co toa do.
+- Neu phat hien loi, dong trang thai mo phong se canh bao ngay trong panel.
+
+3. Toa do buu cuc moi/di doi
+- Marker buu cuc mo moi/di doi hien tooltip gom ten buu cuc va toa do.
+- Label buu cuc tren ban do hien them toa do khi zoom du gan.
+- Khi keo marker de chinh vi tri thuc te, he thong cap nhat lai toa do, popup va audit.
+
+4. Ket qua test du lieu dong bo V133B
+- Du lieu nen: 226 xa/phuong.
+- Buu cuc hien huu: 62.
+- Buu cuc sau mo phong: 71.
+- De xuat mo them: 9.
+- Chay audit: 0 xa/phuong bi gan chong buu cuc.
+- Buu cuc moi/di doi thieu toa do: 0.
+- Buu cuc Vinh Xuan da co trong du lieu: 23057000 - (VLO) Vinh Xuan.
+
+----------------------------------------------------------------------
+
+DCL OPERATIONS V133B
+
+Hoan thien module Quy hoach mang luoi va Mo phong quy hoach buu cuc.
+
+1. Dong bo du lieu goc
+- He thong tu dong dong bo ten buu cuc moi tu sheet Data cot C -> cot D.
+- He thong cap nhat Vol giao moi cot J va Vol lay moi cot K tu sheet Xa_Phuong.
+- Volume mo phong duoc tinh bang: (Vol giao + Vol lay) x 1.3.
+- Buu cuc Vinh Xuan duoc nap day du neu co trong file Excel.
+- Cac polygon khong co trong Excel se khong su dung volume cu de tranh lam sai dashboard.
+
+2. Tu chay goi y quy hoach
+- Mo module Quy hoach mang luoi.
+- Bam menu tren ban do.
+- Mo "Bo loc & Quy hoach".
+- Chon "Mo phong quy hoach buu cuc".
+- Bam "Tu chay goi y quy hoach".
+- He thong giu nguyen 62 buu cuc hien huu lam nen.
+- He thong khong coi moi xa/phuong la mot buu cuc.
+- He thong chi de xuat mo them khi cum buu cuc vuot ro ve volume, dien tich, so xa/phuong hoac khoang cach uoc tinh.
+- Ket qua kiem thu voi file Du_lieu_Heatmap_DCL (1).xlsx: 62 buu cuc truoc quy hoach, 71 buu cuc sau mo phong, de xuat them 9 buu cuc.
+
+3. Facility Location
+- Khi tach cum, he thong tinh vi tri dat buu cuc de xuat theo diem toi uu co trong so volume.
+- Diem de xuat uu tien giam tong khoang cach tu buu cuc den cac xa/phuong trong cum.
+- Marker mo phong co the keo tren ban do de chinh theo mat bang, truc duong va van hanh thuc te.
+- Sau khi keo marker, he thong cap nhat lai toa do va thong tin phan tich cua cum.
+
+4. Upload Excel
+- Bam "Upload du lieu quy hoach (.xlsx)".
+- File can co sheet "Xa_Phuong".
+- Cac cot dang su dung:
+  + Cot A: Polygon xa/phuong.
+  + Cot B: Tinh moi.
+  + Cot C: Xa/Phuong moi.
+  + Cot D: Dien tich.
+  + Cot E: Buu cuc phu trach hien huu.
+  + Cot F: Toa do buu cuc hien huu.
+  + Cot G: Buu cuc phu trach moi.
+  + Cot H: Toa do de xuat buu cuc moi/di doi.
+  + Cot J: Vol giao moi.
+  + Cot K: Vol lay moi.
+- Upload chi tao lop mo phong, khong ghi de du lieu goc.
+
+5. Hien thi tren ban do
+- Polygon xa/phuong to mau theo buu cuc phu trach.
+- Cac xa/phuong cung buu cuc co cung mau.
+- Marker buu cuc hien dung toa do hien huu, toa do di doi hoac toa do mo moi.
+- Label buu cuc nam o trung tam cum phu trach.
+- Label xa/phuong nam o trung tam polygon.
+- Marker, label va lop mo phong khong chan thao tac click polygon.
+- Click xa/phuong hien popup, highlight, volume, dien tich va buu cuc phu trach.
+
+6. So sanh truoc/sau
+- Toggle so sanh da thu gon thanh checkbox nho.
+- Sau khi upload, mac dinh chi bat "Buu cuc sau quy hoach / mo phong".
+- Nguoi dung co the bat "Buu cuc hien tai / du lieu goc" khi can so sanh.
+
+7. Luu y van hanh
+- Ket qua quy hoach la mo phong ho tro ra quyet dinh, khong thay the khao sat thuc te.
+- Truoc khi mo moi hoac di doi BC can kiem tra duong chinh, cau/song, dan cu, mat bang thue va nang luc van hanh.

@@ -1,0 +1,32 @@
+{
+  "name": "Ki3ran Maps - Quy hoạch & Hiệu suất ĐCL",
+  "short_name": "Ki3ran",
+  "description": "V132: Upload Excel planning simulation with Data C-D branch alias mapping, non-destructive map layer, labels, popup and compare mode",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "id": "/"
+}

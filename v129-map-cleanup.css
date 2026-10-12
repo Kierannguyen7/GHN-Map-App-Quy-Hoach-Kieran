@@ -1,0 +1,55 @@
+/* V129: remove the obsolete planning note and collapse map attribution. */
+html body .legend{
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+
+html body .leaflet-control-attribution{
+  display:none!important;
+  visibility:hidden!important;
+}
+
+#v129MapSource{
+  position:fixed;
+  right:8px;
+  bottom:8px;
+  z-index:850;
+  display:flex;
+  width:26px;
+  height:26px;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+  border:1px solid rgba(100,116,139,.42);
+  border-radius:50%;
+  background:rgba(255,255,255,.82);
+  color:#475569;
+  box-shadow:0 2px 8px rgba(15,23,42,.14);
+  font:900 15px/1 Arial,sans-serif;
+  text-decoration:none;
+  backdrop-filter:blur(4px);
+}
+
+#v129MapSource:hover,
+#v129MapSource:focus-visible{
+  background:#fff;
+  color:#0f172a;
+  outline:2px solid rgba(255,107,0,.45);
+  outline-offset:2px;
+}
+
+html.app-locked #v129MapSource,
+body.app-locked #v129MapSource{
+  display:none!important;
+}
+
+@media(max-width:760px){
+  #v129MapSource{
+    right:7px;
+    bottom:max(7px,env(safe-area-inset-bottom,0px));
+    width:24px;
+    height:24px;
+    font-size:14px;
+  }
+}

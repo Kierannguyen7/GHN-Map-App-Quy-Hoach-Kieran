@@ -1,0 +1,106 @@
+/* V122: login matched to the approved reference and one nested Operations menu. */
+html body #loginOverlay .ops-login-credit{gap:4px!important}
+html body #loginOverlay .ops-login-credit b{font-weight:500!important}
+.v122-login-bell{display:none}
+
+@media(min-width:761px){
+  html body #loginOverlay{padding:16px!important;background:#f7f9fc!important}
+  html body #loginOverlay .ops-login-shell{grid-template-columns:minmax(0,55%) minmax(0,45%)!important;grid-template-rows:76px minmax(0,1fr) 54px!important;border-radius:14px!important}
+  html body #loginOverlay .v121-login-header{height:76px!important;padding:0 22px!important}
+  html body #loginOverlay .v121-login-brand{font-size:20px!important}
+  html body #loginOverlay .ops-login-hero{grid-column:1!important;grid-row:2!important}
+  html body #loginOverlay .ops-hero-content{padding:94px 48px 18px!important}
+  html body #loginOverlay .ops-hero-content h1{font-size:48px!important;margin:8px 0 10px!important}
+  html body #loginOverlay .ops-hero-content h2{font-size:23px!important;margin:0 0 12px!important;white-space:nowrap!important}
+  html body #loginOverlay .ops-hero-content>p{font-size:18px!important}
+  html body #loginOverlay .ops-feature-row{width:430px!important;margin-top:41px!important;grid-template-columns:62px minmax(0,1fr)!important;column-gap:16px!important;row-gap:36px!important}
+  html body #loginOverlay .ops-feature-row .ops-feature-icon.green{display:flex!important}
+  html body #loginOverlay .ops-feature-row .ops-feature-icon.green+div{display:block!important}
+  html body #loginOverlay .ops-feature-row b{font-size:15px!important}
+  html body #loginOverlay .ops-feature-row span{font-size:13px!important;line-height:1.45!important}
+  html body #loginOverlay .ops-iso-map{left:4%!important;right:4%!important;bottom:0!important;width:92%!important;height:42%!important}
+  html body #loginOverlay .ops-login-form-wrap{grid-column:2!important;grid-row:2!important;padding:34px clamp(34px,4.4vw,62px)!important}
+  html body #loginOverlay .ops-login-form-wrap .login-card{position:relative!important;top:6px!important;width:min(540px,100%)!important;max-width:540px!important;padding:62px 42px 54px!important;border:1px solid #e2e8f0!important;border-radius:22px!important;box-shadow:0 24px 58px rgba(15,23,42,.12)!important}
+  html body #loginOverlay .ops-login-form-wrap .login-brand{margin:0 0 34px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-title{font-size:38px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-subtitle{font-size:17px!important;margin-top:10px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-field{margin-bottom:20px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-field input{height:66px!important;min-height:66px!important;padding-left:58px!important;padding-right:56px!important;color:#0f172a!important;background:#fff!important;font-size:19px!important;border-radius:16px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-btn{height:68px!important;min-height:68px!important;margin-top:22px!important;font-size:23px!important;border-radius:17px!important}
+  html body #loginOverlay .ops-login-form-wrap .ops-divider{margin:28px 0 22px!important}
+  html body #loginOverlay .ops-login-form-wrap .ops-sso{height:58px!important;min-height:58px!important;font-size:16px!important;border-radius:14px!important}
+  html body #loginOverlay .ops-login-credit{height:54px!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;font-size:13px!important}
+}
+
+/* Turn the existing map decoration into the same map + dashboard composition. */
+html body #loginOverlay .ops-iso-map .warehouse.w1{display:block!important;position:absolute!important;left:auto!important;right:4%!important;top:4%!important;bottom:auto!important;width:29%!important;height:44%!important;border:1px solid rgba(56,189,248,.65)!important;border-radius:4px!important;background:linear-gradient(180deg,rgba(5,57,129,.96),rgba(3,31,78,.98))!important;box-shadow:0 12px 24px rgba(0,0,0,.35),inset 0 0 24px rgba(14,165,233,.18)!important;transform:perspective(420px) rotateY(-8deg) rotateX(2deg)!important}
+html body #loginOverlay .ops-iso-map .warehouse.w1:before{content:''!important;position:absolute!important;left:10%!important;right:34%!important;top:18%!important;height:34%!important;background:linear-gradient(155deg,transparent 0 12%,#22d3ee 13% 15%,transparent 16% 28%,#38bdf8 29% 31%,transparent 32% 48%,#2dd4bf 49% 51%,transparent 52% 65%,#60a5fa 66% 68%,transparent 69%)!important;border:0!important;box-shadow:none!important}
+html body #loginOverlay .ops-iso-map .warehouse.w1:after{content:''!important;position:absolute!important;right:8%!important;bottom:12%!important;width:28%!important;aspect-ratio:1!important;border-radius:50%!important;background:conic-gradient(#22d3ee 0 34%,#8b5cf6 34% 62%,#fb923c 62% 76%,#0ea5e9 76%)!important;box-shadow:0 0 12px rgba(34,211,238,.45)!important}
+html body #loginOverlay .ops-iso-map .warehouse.w2{display:none!important}
+
+/* Operations: all functional sections live inside one two-level menu. */
+body.v106-ops-mode #v106Right.v122-ops-right-merged{display:none!important;visibility:hidden!important}
+body.v106-ops-mode #v106Left.mobile-open{width:min(390px,calc(100vw - 24px))!important}
+#v122OpsGroup,#v122DensityGroup{display:block;width:100%;border:1px solid #dbe3ee;border-radius:13px;background:#fff;overflow:hidden;flex:0 0 auto}
+.v122-ops-group-head{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:0;background:#fff;color:#0f172a;padding:11px 13px;font-size:12px;font-weight:1000;text-align:left;cursor:pointer}
+.v122-ops-group-head i,.v122-ops-subhead i{font-style:normal;color:#64748b;transition:transform .18s}
+.v122-ops-group.open>.v122-ops-group-head i,.v122-ops-subacc.open>.v122-ops-subhead i{transform:rotate(180deg)}
+.v122-ops-group-body{display:none;gap:8px;padding:8px;border-top:1px solid #e2e8f0;background:#f8fafc}
+.v122-ops-group.open>.v122-ops-group-body{display:grid}
+.v122-ops-subacc{border:1px solid #e2e8f0;border-radius:11px;background:#fff;overflow:hidden}
+.v122-ops-subhead{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:0;background:#fff;color:#0f172a;padding:9px 11px;text-align:left;cursor:pointer}
+.v122-ops-subhead span{display:grid;gap:2px;min-width:0}.v122-ops-subhead b{font-size:11px;line-height:1.2}.v122-ops-subhead small{color:#64748b;font-size:8px;line-height:1.25;font-weight:750}
+.v122-ops-subbody{display:none;padding:8px;border-top:1px solid #e2e8f0;background:#f8fafc;max-height:min(520px,55vh);overflow:auto}
+.v122-ops-subacc.open>.v122-ops-subbody{display:block}
+#v122OpsGroup .v122-moved-card{display:block!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+#v122OpsGroup .v122-moved-card>.v106-head{display:none!important}
+#v122OpsGroup .v122-moved-card>.v106-body{display:block!important;padding:0!important;max-height:none!important;overflow:visible!important}
+#v122OpsGroup .v106-dashboard .v106-table-wrap,#v122OpsGroup .v106-dashboard .v106-body{overflow:auto!important}
+#v122OpsGroup .v106-dashboard table{min-width:560px!important}
+#v122OpsGroup .v106-route .v119-sim-grid{grid-template-columns:1fr!important}
+#v122DensityGroup .v122-ops-group-head{
+  background:linear-gradient(135deg,#fff7ed,#fff);
+  color:#c2410c;
+}
+#v122DensityGroup .v122-density-card{
+  display:block!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+#v122DensityGroup .v122-density-card>.v106-head{display:none!important}
+#v122DensityGroup .v122-density-card>.v106-body{
+  display:block!important;
+  padding:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+
+@media(max-width:760px){
+  html body #loginOverlay .v121-login-header{position:relative!important;display:block!important;height:104px!important;flex:0 0 104px!important;padding:0!important}
+  html body #loginOverlay .v121-login-brand{position:absolute!important;left:16px!important;bottom:17px!important;font-size:16px!important}
+  html body #loginOverlay .v121-login-lang{position:absolute!important;right:14px!important;top:14px!important;padding:8px 10px!important;font-size:11px!important}
+  .v122-login-bell{display:block;position:absolute;right:17px;bottom:18px;width:16px;height:16px;font-size:0}
+  .v122-login-bell:before{content:'';position:absolute;left:4px;top:2px;width:8px;height:9px;border:2px solid #23406f;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom:0}
+  .v122-login-bell:after{content:'';position:absolute;left:3px;bottom:2px;width:10px;height:2px;border-radius:3px;background:#23406f;box-shadow:4px 3px 0 -1px #23406f}
+  html body #loginOverlay .ops-login-hero{min-height:238px!important;height:238px!important;flex:0 0 238px!important}
+  html body #loginOverlay .ops-iso-map{height:230px!important}
+  html body #loginOverlay .ops-iso-map .warehouse.w1{right:5%!important;top:7%!important;width:30%!important;height:45%!important}
+  html body #loginOverlay .ops-login-form-wrap{margin-top:-24px!important;padding:29px 14px 108px!important;border-radius:24px 24px 0 0!important}
+  html body #loginOverlay .ops-login-form-wrap .login-card{padding:0 6px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-brand{margin:0 0 20px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-title{font-size:28px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-subtitle{font-size:14px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-field{margin-bottom:14px!important}
+  html body #loginOverlay .ops-login-form-wrap .login-field input{height:50px!important;min-height:50px!important;color:#0f172a!important}
+  html body #loginOverlay .ops-login-form-wrap .login-btn{height:50px!important;min-height:50px!important;margin-top:13px!important}
+  html body #loginOverlay .ops-login-form-wrap .ops-divider{margin:17px 0!important}
+  html body #loginOverlay .ops-login-form-wrap .ops-sso{height:48px!important;min-height:48px!important}
+  html body #loginOverlay .ops-login-credit{height:82px!important;display:flex!important;flex-direction:column!important;gap:3px!important;align-items:center!important;justify-content:center!important;font-size:11px!important;line-height:1.35!important}
+  html body #loginOverlay .ops-login-credit b{font-weight:500!important}
+  body.v106-ops-mode #v106Left.mobile-open{left:8px!important;right:8px!important;top:176px!important;bottom:8px!important;width:auto!important;padding:8px!important}
+  .v122-ops-subbody{max-height:52vh}
+}

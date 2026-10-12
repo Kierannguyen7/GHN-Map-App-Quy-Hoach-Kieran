@@ -1,0 +1,50 @@
+/* V126: one mobile geometry shared by Planning and Operations. */
+@media(max-width:760px){
+  html body #v120MapMenuBtn,
+  html body #v121OpsMenuBtn{
+    position:fixed!important;
+    left:12px!important;
+    top:76px!important;
+    width:44px!important;
+    min-width:44px!important;
+    height:44px!important;
+    min-height:44px!important;
+    padding:0!important;
+    border:2px solid #fff!important;
+    border-radius:13px!important;
+    background:linear-gradient(135deg,#ff6b00,#f04416)!important;
+    color:#fff!important;
+    font-size:20px!important;
+    font-weight:1000!important;
+    line-height:1!important;
+    box-shadow:0 8px 22px rgba(15,23,42,.3)!important;
+    z-index:2147483550!important;
+  }
+
+  html body.mobile-ui #mainSidebar.sidebar.mobile-open,
+  html body.mobile-ui #v118PlanningCenter.open,
+  html body.v106-ops-mode #v106Left.mobile-open{
+    position:fixed!important;
+    left:8px!important;
+    right:8px!important;
+    top:auto!important;
+    bottom:8px!important;
+    width:auto!important;
+    height:50dvh!important;
+    min-height:0!important;
+    max-height:50dvh!important;
+    border-radius:20px!important;
+    overflow:auto!important;
+  }
+
+  html body.mobile-ui #mainSidebar.sidebar.mobile-open{
+    z-index:2147483400!important;
+  }
+  html body.mobile-ui #v118PlanningCenter.open{
+    z-index:2147483400!important;
+    overflow:hidden!important;
+  }
+  html body.v106-ops-mode #v106Left.mobile-open{
+    z-index:2147483400!important;
+  }
+}
